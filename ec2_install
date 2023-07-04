@@ -1,0 +1,32 @@
+To install Docker on an AWS (Amazon Web Services) instance, you can follow these general steps:
+
+1. Launch an EC2 Instance: Log in to your AWS Management Console and navigate to EC2. Launch a new EC2 instance based on your requirements, such as Amazon Linux, Ubuntu, or any other supported OS.
+
+2. Connect to the EC2 Instance: Once the instance is launched, connect to it using SSH. You can use tools like PuTTY (Windows) or SSH command-line tools (Linux/macOS) to establish a secure shell connection.
+
+3. Update the System: Run the following commands to update the package list and upgrade the existing packages on your instance:
+   ```
+   sudo yum update -y   # for Amazon Linux
+   sudo apt update      # for Ubuntu
+   ```
+
+4. Install Docker: Execute the following commands to install Docker on your EC2 instance:
+   ```
+   sudo yum install docker -y     # for Amazon Linux
+   sudo apt install docker.io -y  # for Ubuntu
+   ```
+
+5. Start and Enable Docker Service: After the installation is complete, start the Docker service and enable it to start automatically on system boot:
+   ```
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   ```
+
+6. Add User to the Docker Group (Optional): By default, the Docker daemon runs with root privileges. To run Docker commands without using `sudo`, you can add your user to the Docker group:
+   ```
+   sudo usermod -aG docker <your_username>
+   ```
+
+7. Log out and Log back in: If you added your user to the Docker group in the previous step, you need to log out and log back in for the changes to take effect.
+
+That's it! Docker should now be installed and ready to use on your AWS instance. You can verify the installation by running the command `docker version`, which will display the installed Docker version information.
