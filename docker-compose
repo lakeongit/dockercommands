@@ -1,0 +1,26 @@
+Based on the output you provided, it appears that Docker is installed and running correctly. However, the error you encountered suggests that the `docker-compose` command is not found. This indicates that Docker Compose is not installed on your system.
+
+To resolve this issue and install Docker Compose, you can follow these steps:
+
+1. Connect to your EC2 instance using SSH.
+
+2. Run the following commands to download the Docker Compose binary:
+   ```
+   sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   ```
+
+3. Apply executable permissions to the Docker Compose binary:
+   ```
+   sudo chmod +x /usr/local/bin/docker-compose
+   ```
+
+4. Verify the installation by checking the Docker Compose version:
+   ```
+   docker-compose --version
+   ```
+
+   If the installation was successful, you should see the version information displayed.
+
+After installing Docker Compose, you should be able to use the `docker-compose` command to manage your multi-container applications.
+
+If you continue to experience issues or encounter any error messages during the installation, please provide the specific error details so that I can assist you further.
