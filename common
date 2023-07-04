@@ -1,0 +1,86 @@
+Certainly! Here's a list of commonly used Docker commands for building apps, managing containers, and troubleshooting:
+
+Building Apps:
+1. **docker build**: Build a Docker image from a Dockerfile.
+   ```
+   docker build -t <image_name> <path_to_dockerfile>
+   ```
+
+2. **docker run**: Create and start a new container from an image.
+   ```
+   docker run -d --name <container_name> <image_name>
+   ```
+
+3. **docker-compose up**: Build and start containers defined in a Docker Compose file.
+   ```
+   docker-compose up -d
+   ```
+
+4. **docker push**: Push an image to a container registry.
+   ```
+   docker push <image_name>
+   ```
+
+Managing Containers:
+1. **docker ps**: List running containers.
+   ```
+   docker ps
+   ```
+
+2. **docker stop**: Stop a running container.
+   ```
+   docker stop <container_name>
+   ```
+
+3. **docker start**: Start a stopped container.
+   ```
+   docker start <container_name>
+   ```
+
+4. **docker restart**: Restart a running container.
+   ```
+   docker restart <container_name>
+   ```
+
+5. **docker logs**: Fetch the logs of a container.
+   ```
+   docker logs <container_name>
+   ```
+
+6. **docker exec**: Run a command inside a running container.
+   ```
+   docker exec -it <container_name> <command>
+   ```
+
+Troubleshooting:
+1. **docker images**: List locally available Docker images.
+   ```
+   docker images
+   ```
+
+2. **docker system df**: Show Docker disk usage.
+   ```
+   docker system df
+   ```
+
+3. **docker network ls**: List Docker networks.
+   ```
+   docker network ls
+   ```
+
+4. **docker volume ls**: List Docker volumes.
+   ```
+   docker volume ls
+   ```
+
+5. **docker rm**: Remove a container.
+   ```
+   docker rm <container_name>
+   ```
+
+6. **docker rmi**: Remove an image.
+   ```
+   docker rmi <image_name>
+   ```
+
+These are just a few examples of commonly used Docker commands for building, managing, and troubleshooting containers. Docker has a wide range of commands and options available, so it's recommended to refer to the Docker documentation for more detailed information on specific commands and their usage.
